@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,11 @@
 		E13BE058267902E900D04408 /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13BE057267902E900D04408 /* CharacterViewController.swift */; };
 		E13BE05A2679031600D04408 /* EpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13BE0592679031600D04408 /* EpisodeViewController.swift */; };
 		E13BE05C2679032B00D04408 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13BE05B2679032B00D04408 /* LocationViewController.swift */; };
+		E13BE06026790AE700D04408 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13BE05F26790AE700D04408 /* NetworkManager.swift */; };
+		E13BE06326790C7900D04408 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = E13BE06226790C7900D04408 /* SDWebImage */; };
+		E13BE0692679105700D04408 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13BE0682679105700D04408 /* Constants.swift */; };
+		E13BE06B2679124000D04408 /* CharacterDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13BE06A2679124000D04408 /* CharacterDataModel.swift */; };
+		E13BE06D2679281600D04408 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13BE06C2679281600D04408 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +37,10 @@
 		E13BE057267902E900D04408 /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
 		E13BE0592679031600D04408 /* EpisodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewController.swift; sourceTree = "<group>"; };
 		E13BE05B2679032B00D04408 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		E13BE05F26790AE700D04408 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		E13BE0682679105700D04408 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E13BE06A2679124000D04408 /* CharacterDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDataModel.swift; sourceTree = "<group>"; };
+		E13BE06C2679281600D04408 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E13BE06326790C7900D04408 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,8 +76,9 @@
 			children = (
 				E13BE03F2678FBFB00D04408 /* AppDelegate.swift */,
 				E13BE0412678FBFB00D04408 /* SceneDelegate.swift */,
-				E13BE056267902B200D04408 /* View */,
-				E13BE0452678FBFB00D04408 /* Main.storyboard */,
+				E13BE05D26790AC400D04408 /* Model */,
+				E13BE05E26790AD400D04408 /* View */,
+				E13BE056267902B200D04408 /* Controller */,
 				E13BE04B2678FC0700D04408 /* Assets.xcassets */,
 				E13BE04D2678FC0700D04408 /* LaunchScreen.storyboard */,
 				E13BE0502678FC0700D04408 /* Info.plist */,
@@ -76,13 +87,32 @@
 			path = "Final Space Wiki";
 			sourceTree = "<group>";
 		};
-		E13BE056267902B200D04408 /* View */ = {
+		E13BE056267902B200D04408 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				E13BE0432678FBFB00D04408 /* HomeViewController.swift */,
 				E13BE057267902E900D04408 /* CharacterViewController.swift */,
 				E13BE0592679031600D04408 /* EpisodeViewController.swift */,
 				E13BE05B2679032B00D04408 /* LocationViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E13BE05D26790AC400D04408 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E13BE05F26790AE700D04408 /* NetworkManager.swift */,
+				E13BE0682679105700D04408 /* Constants.swift */,
+				E13BE06A2679124000D04408 /* CharacterDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E13BE05E26790AD400D04408 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E13BE0452678FBFB00D04408 /* Main.storyboard */,
+				E13BE06C2679281600D04408 /* CollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -103,6 +133,9 @@
 			dependencies = (
 			);
 			name = "Final Space Wiki";
+			packageProductDependencies = (
+				E13BE06226790C7900D04408 /* SDWebImage */,
+			);
 			productName = "Final Space Wiki";
 			productReference = E13BE03C2678FBFB00D04408 /* Final Space Wiki.app */;
 			productType = "com.apple.product-type.application";
@@ -130,6 +163,9 @@
 				Base,
 			);
 			mainGroup = E13BE0332678FBFB00D04408;
+			packageReferences = (
+				E13BE06126790C7900D04408 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = E13BE03D2678FBFB00D04408 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -160,10 +196,14 @@
 				E13BE05C2679032B00D04408 /* LocationViewController.swift in Sources */,
 				E13BE0442678FBFB00D04408 /* HomeViewController.swift in Sources */,
 				E13BE058267902E900D04408 /* CharacterViewController.swift in Sources */,
+				E13BE06B2679124000D04408 /* CharacterDataModel.swift in Sources */,
 				E13BE04A2678FBFB00D04408 /* Final_Space_Wiki.xcdatamodeld in Sources */,
+				E13BE0692679105700D04408 /* Constants.swift in Sources */,
+				E13BE06026790AE700D04408 /* NetworkManager.swift in Sources */,
 				E13BE0402678FBFB00D04408 /* AppDelegate.swift in Sources */,
 				E13BE05A2679031600D04408 /* EpisodeViewController.swift in Sources */,
 				E13BE0422678FBFB00D04408 /* SceneDelegate.swift in Sources */,
+				E13BE06D2679281600D04408 /* CollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,7 +358,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.roberttaylor.Final-Space-Wiki";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.roberttaylor.Final-Space-Wiki-UIKit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -338,7 +378,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.roberttaylor.Final-Space-Wiki";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.roberttaylor.Final-Space-Wiki-UIKit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -367,6 +407,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E13BE06126790C7900D04408 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.11.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E13BE06226790C7900D04408 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E13BE06126790C7900D04408 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		E13BE0482678FBFB00D04408 /* Final_Space_Wiki.xcdatamodeld */ = {
