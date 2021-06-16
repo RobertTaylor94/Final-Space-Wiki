@@ -8,6 +8,7 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,7 +16,7 @@ class HomeViewController: UIViewController {
     }
 
     @IBAction func charactersButton(_ sender: UIButton) {
-        
+
     }
     
     @IBAction func episodesButton(_ sender: UIButton) {
