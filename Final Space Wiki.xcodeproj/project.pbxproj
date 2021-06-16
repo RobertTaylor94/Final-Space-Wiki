@@ -17,11 +17,13 @@
 		E13BE058267902E900D04408 /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13BE057267902E900D04408 /* CharacterViewController.swift */; };
 		E13BE05A2679031600D04408 /* EpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13BE0592679031600D04408 /* EpisodeViewController.swift */; };
 		E13BE05C2679032B00D04408 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13BE05B2679032B00D04408 /* LocationViewController.swift */; };
-		E13BE06026790AE700D04408 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13BE05F26790AE700D04408 /* NetworkManager.swift */; };
+		E13BE06026790AE700D04408 /* CharacterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13BE05F26790AE700D04408 /* CharacterManager.swift */; };
 		E13BE06326790C7900D04408 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = E13BE06226790C7900D04408 /* SDWebImage */; };
 		E13BE0692679105700D04408 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13BE0682679105700D04408 /* Constants.swift */; };
-		E13BE06B2679124000D04408 /* CharacterDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13BE06A2679124000D04408 /* CharacterDataModel.swift */; };
+		E13BE06B2679124000D04408 /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13BE06A2679124000D04408 /* DataModels.swift */; };
 		E13BE06D2679281600D04408 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13BE06C2679281600D04408 /* CollectionViewCell.swift */; };
+		E13BE091267A83FD00D04408 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13BE090267A83FD00D04408 /* LocationManager.swift */; };
+		E13BE093267A85E800D04408 /* LocationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13BE092267A85E800D04408 /* LocationViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,10 +39,12 @@
 		E13BE057267902E900D04408 /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
 		E13BE0592679031600D04408 /* EpisodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewController.swift; sourceTree = "<group>"; };
 		E13BE05B2679032B00D04408 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
-		E13BE05F26790AE700D04408 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		E13BE05F26790AE700D04408 /* CharacterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterManager.swift; sourceTree = "<group>"; };
 		E13BE0682679105700D04408 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		E13BE06A2679124000D04408 /* CharacterDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDataModel.swift; sourceTree = "<group>"; };
+		E13BE06A2679124000D04408 /* DataModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
 		E13BE06C2679281600D04408 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		E13BE090267A83FD00D04408 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		E13BE092267A85E800D04408 /* LocationViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +105,10 @@
 		E13BE05D26790AC400D04408 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E13BE05F26790AE700D04408 /* NetworkManager.swift */,
+				E13BE05F26790AE700D04408 /* CharacterManager.swift */,
 				E13BE0682679105700D04408 /* Constants.swift */,
-				E13BE06A2679124000D04408 /* CharacterDataModel.swift */,
+				E13BE06A2679124000D04408 /* DataModels.swift */,
+				E13BE090267A83FD00D04408 /* LocationManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 			children = (
 				E13BE0452678FBFB00D04408 /* Main.storyboard */,
 				E13BE06C2679281600D04408 /* CollectionViewCell.swift */,
+				E13BE092267A85E800D04408 /* LocationViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -196,14 +202,16 @@
 				E13BE05C2679032B00D04408 /* LocationViewController.swift in Sources */,
 				E13BE0442678FBFB00D04408 /* HomeViewController.swift in Sources */,
 				E13BE058267902E900D04408 /* CharacterViewController.swift in Sources */,
-				E13BE06B2679124000D04408 /* CharacterDataModel.swift in Sources */,
+				E13BE06B2679124000D04408 /* DataModels.swift in Sources */,
 				E13BE04A2678FBFB00D04408 /* Final_Space_Wiki.xcdatamodeld in Sources */,
 				E13BE0692679105700D04408 /* Constants.swift in Sources */,
-				E13BE06026790AE700D04408 /* NetworkManager.swift in Sources */,
+				E13BE06026790AE700D04408 /* CharacterManager.swift in Sources */,
 				E13BE0402678FBFB00D04408 /* AppDelegate.swift in Sources */,
+				E13BE091267A83FD00D04408 /* LocationManager.swift in Sources */,
 				E13BE05A2679031600D04408 /* EpisodeViewController.swift in Sources */,
 				E13BE0422678FBFB00D04408 /* SceneDelegate.swift in Sources */,
 				E13BE06D2679281600D04408 /* CollectionViewCell.swift in Sources */,
+				E13BE093267A85E800D04408 /* LocationViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
