@@ -78,6 +78,7 @@
 		E13BE03E2678FBFB00D04408 /* Final Space Wiki */ = {
 			isa = PBXGroup;
 			children = (
+				E13BE094267A92EC00D04408 /* Images */,
 				E13BE03F2678FBFB00D04408 /* AppDelegate.swift */,
 				E13BE0412678FBFB00D04408 /* SceneDelegate.swift */,
 				E13BE05D26790AC400D04408 /* Model */,
@@ -121,6 +122,13 @@
 				E13BE092267A85E800D04408 /* LocationViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E13BE094267A92EC00D04408 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
