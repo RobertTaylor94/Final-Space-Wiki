@@ -19,3 +19,11 @@ struct character: Codable {
 //    let abilites: [String]?
     
 }
+
+struct Location: Codable {
+    let name: String
+    let type: String
+    let inhabitants: [String]
+    let notableResidents: [String]?
+    let img_url: String
+}
