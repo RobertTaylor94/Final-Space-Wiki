@@ -24,6 +24,7 @@
 		E13BE06D2679281600D04408 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13BE06C2679281600D04408 /* CollectionViewCell.swift */; };
 		E13BE091267A83FD00D04408 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13BE090267A83FD00D04408 /* LocationManager.swift */; };
 		E13BE093267A85E800D04408 /* LocationViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13BE092267A85E800D04408 /* LocationViewCell.swift */; };
+		E13BE09626823D3300D04408 /* DetailCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13BE09526823D3300D04408 /* DetailCharacterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		E13BE06C2679281600D04408 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		E13BE090267A83FD00D04408 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		E13BE092267A85E800D04408 /* LocationViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewCell.swift; sourceTree = "<group>"; };
+		E13BE09526823D3300D04408 /* DetailCharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCharacterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			children = (
 				E13BE0432678FBFB00D04408 /* HomeViewController.swift */,
 				E13BE057267902E900D04408 /* CharacterViewController.swift */,
+				E13BE09526823D3300D04408 /* DetailCharacterViewController.swift */,
 				E13BE0592679031600D04408 /* EpisodeViewController.swift */,
 				E13BE05B2679032B00D04408 /* LocationViewController.swift */,
 			);
@@ -208,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E13BE05C2679032B00D04408 /* LocationViewController.swift in Sources */,
+				E13BE09626823D3300D04408 /* DetailCharacterViewController.swift in Sources */,
 				E13BE0442678FBFB00D04408 /* HomeViewController.swift in Sources */,
 				E13BE058267902E900D04408 /* CharacterViewController.swift in Sources */,
 				E13BE06B2679124000D04408 /* DataModels.swift in Sources */,

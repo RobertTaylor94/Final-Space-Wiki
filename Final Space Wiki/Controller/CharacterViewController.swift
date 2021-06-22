@@ -25,6 +25,7 @@ class CharacterViewController: UIViewController, UICollectionViewDelegate, UICol
         charCollectionView.delegate = self
         characterManager.loadCharacterData()
         items = characterManager.characters
+        self.view.backgroundColor = UIColor.black
     }
     
     func didRecieveDataUpdate(data: [character]) {
@@ -44,6 +45,21 @@ class CharacterViewController: UIViewController, UICollectionViewDelegate, UICol
         cell.charImage.clipsToBounds = true
         cell.charImage.layer.cornerRadius = 50
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(identifier: "DetailCharacterViewController") as? DetailCharacterViewController
+        vc?.charName = items[indexPath.row].name
+        vc?.imageUrl = items[indexPath.row].img_url
+        vc?.status = items[indexPath.row].status
+        vc?.species = items[indexPath.row].species ?? ""
+        vc?.gender = items[indexPath.row].gender
+        let aliasString = items[indexPath.row].alias.joined(separator: ", ")
+        vc?.aliasString = aliasString
+        vc?.origin = items[indexPath.row].origin
+        let abilitiesString = items[indexPath.row].abilities?.joined(separator: ", ")
+        vc?.abilitiesString = abilitiesString ?? ""
+        self.navigationController?.pushViewController(vc!, animated: true)
     }
    
     

@@ -21,6 +21,8 @@ class LocationViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.delegate = self
         tableView.dataSource = self
         locations = locationManager.locations
+        tableView.backgroundColor = UIColor(named: "locationGreen")
+        self.view.backgroundColor = UIColor(named: "locationGreen")
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -32,7 +34,13 @@ class LocationViewController: UIViewController, UITableViewDelegate, UITableView
         
         cell.locationNameLbl.text = locations[indexPath.row].name
         cell.locationTypeLbl.text = locations[indexPath.row].type
-        cell.locationInhabitantsLbl.text = "\(locations[indexPath.row].inhabitants)"
+        let inhabString = locations[indexPath.row].inhabitants.joined(separator: ", ")
+        if locations[indexPath.row].inhabitants != [] {
+            cell.locationInhabitantsLbl.text = inhabString
+        } else {
+            cell.locationInhabitantsLbl.text = "Unknown"
+        }
+      
         cell.locationImg.sd_setImage(with: URL(string: locations[indexPath.row].img_url))
         
         

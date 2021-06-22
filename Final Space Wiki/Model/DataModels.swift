@@ -16,7 +16,7 @@ struct character: Codable {
     let alias: [String]
     let origin: String
     let img_url: String
-//    let abilites: [String]?
+    let abilities: [String]?
     
 }
 
