@@ -27,3 +27,17 @@ struct Location: Codable {
     let notableResidents: [String]?
     let img_url: String
 }
+
+struct Episode: Codable {
+    let name: String
+    let air_date: String
+    let director: String
+    let writer: String
+    let characters: [String]
+    let img_url: String
+}
+
+struct EpisodeCharacter: Codable {
+    let name: String
+    let img_url: String
+}

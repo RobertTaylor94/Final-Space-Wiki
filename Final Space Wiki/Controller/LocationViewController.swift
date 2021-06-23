@@ -40,10 +40,7 @@ class LocationViewController: UIViewController, UITableViewDelegate, UITableView
         } else {
             cell.locationInhabitantsLbl.text = "Unknown"
         }
-      
         cell.locationImg.sd_setImage(with: URL(string: locations[indexPath.row].img_url))
-        
-        
         return cell
     }
     
