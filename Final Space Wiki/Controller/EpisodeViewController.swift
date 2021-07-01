@@ -49,7 +49,8 @@ class EpisodeViewController: UIViewController, UITableViewDelegate, UITableViewD
         vc?.writerText = episodes[indexPath.row].writer
         vc?.episodeName = episodes[indexPath.row].name
         vc?.characterCount = episodes[indexPath.row].characters.count
-        vc?.charArray = episodes[indexPath.row].characters
+        vc?.charImg = episodes[indexPath.row].characters
+        vc?.characters = episodes[indexPath.row].characters
         
         self.navigationController?.pushViewController(vc!, animated: true)
     }

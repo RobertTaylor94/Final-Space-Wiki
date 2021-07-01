@@ -8,34 +8,92 @@
 import Foundation
 
 protocol EpisodeCharactersManagerDelegate {
-    func didRecieveDataUpdate(date: EpisodeCharacter)
+    func didRecieveDataUpdate(data: EpisodeCharacter)
 }
 
 class EpisodeCharactersManager {
     
     var delegate: EpisodeCharactersManagerDelegate?
-    var characters: EpisodeCharacter?
+    var characters: [EpisodeCharacter] = []
     
-    func loadCharacterData(url: String) {
-        if let url = URL(string: url) {
+    func loadCharacterData(urls: [URL]) {
+        
+        
+        let dispatchGroup = DispatchGroup()
+        let dispatchQueue = DispatchQueue(label: "com.urlDownloader.urlqueue")
+        
+        urls.forEach { (url) in
+            dispatchGroup.enter()
+            
             let session = URLSession(configuration: .default)
             
             let task = session.dataTask(with: url) { (data, response, error) in
                 if error != nil {
                     print(error!)
+                    dispatchQueue.async {
+                        dispatchGroup.leave()
+                    }
                     return
                 }
                 if let safeData = data {
                     if let characters = self.parseJson(safeData) {
-                        DispatchQueue.main.async {
-                            self.delegate?.didRecieveDataUpdate(date: characters)
-                            self.characters = characters
+                        dispatchQueue.async {
+                            self.delegate?.didRecieveDataUpdate(data: characters)
+                            self.characters.append(characters)
                         }
                     }
                 }
             }
             task.resume()
-        }
+            
+//            URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
+//                guard let data = data,
+//                      let subject = try? self.parseJson(data)
+//                else {
+//                    print(error!)
+//                    dispatchQueue.async {
+//                        dispatchGroup.leave()
+//                    }
+//                    return
+//                }
+//
+//                dispatchQueue.async {
+//                    self.characters.append(subject)
+//                    dispatchGroup.leave()
+//                }
+//
+//
+//            })
+//
+//        }
+//
+//        dispatchGroup.notify(queue: DispatchQueue.global()) {
+//
+//        }
+        
+        
+//        if let url = URL(string: url) {
+//            let session = URLSession(configuration: .default)
+//
+//            let task = session.dataTask(with: url) { (data, response, error) in
+//                if error != nil {
+//                    print(error!)
+//                    return
+//                }
+//                if let safeData = data {
+//                    if let characters = self.parseJson(safeData) {
+//                        DispatchQueue.main.async {
+//                            self.delegate?.didRecieveDataUpdate(data: characters)
+//                            self.characters = characters
+//                            print(self.characters?.name)
+//                        }
+//                    }
+//                }
+//            }
+//            task.resume()
+//        }
+        
+    }
     }
     
     func parseJson(_ charData: Data) -> EpisodeCharacter? {
