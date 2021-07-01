@@ -4,6 +4,7 @@ A simple wiki app to browse information from the TV show Final Space made using 
 
 ## Home Screen
 The launch screen for the app.
+
 <img src="https://github.com/RobertTaylor94/Final-Space-Wiki/blob/2d7dbae5301a40525a6cec29396edc24f1777bcc/Images/Simulator%20Screen%20Shot%20-%20iPhone%2012%20-%202021-06-16%20at%2021.13.17.png" width="300" height="600">
 
 ## Character List
